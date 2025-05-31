@@ -15,7 +15,7 @@ const Index = () => {
   const [selectedGame, setSelectedGame] = useState<string | null>(null);
   const [displayText, setDisplayText] = useState('');
   
-  const fullText = 'GameHub Hacker Terminal';
+  const fullText = 'GameHub';
   
   useEffect(() => {
     let index = 0;
