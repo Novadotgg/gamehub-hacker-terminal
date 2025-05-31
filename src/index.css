@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -98,4 +99,75 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+
+/* Binary Rain Animation */
+@keyframes binary-rain {
+  0% {
+    transform: translateY(-100vh);
+  }
+  100% {
+    transform: translateY(100vh);
+  }
+}
+
+@keyframes glow-pulse {
+  0%, 100% {
+    text-shadow: 0 0 5px #00ff00, 0 0 10px #00ff00, 0 0 15px #00ff00;
+  }
+  50% {
+    text-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00, 0 0 30px #00ff00;
+  }
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+.binary-rain {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1;
+  background: radial-gradient(ellipse at center, #001100 0%, #000000 100%);
+}
+
+.binary-column {
+  position: absolute;
+  top: -100vh;
+  color: #00ff00;
+  font-family: 'Courier New', monospace;
+  font-size: 14px;
+  line-height: 20px;
+  opacity: 0.6;
+  animation: binary-rain linear infinite;
+  white-space: pre;
+}
+
+.glow-text {
+  animation: glow-pulse 2s ease-in-out infinite;
+}
+
+.typing-effect {
+  overflow: hidden;
+  border-right: 3px solid #00ff00;
+  white-space: nowrap;
+  animation: typing 3s steps(40, end), glow-pulse 1s ease-in-out infinite;
+}
+
+.glass-card {
+  background: rgba(0, 20, 0, 0.3);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(0, 255, 0, 0.2);
+  box-shadow: 0 8px 32px rgba(0, 255, 0, 0.1);
+}
+
+.game-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 30px rgba(0, 255, 0, 0.3);
+  border-color: rgba(0, 255, 0, 0.5);
 }
