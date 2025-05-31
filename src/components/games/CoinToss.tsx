@@ -1,6 +1,5 @@
-
 import React, { useState } from 'react';
-import { Coin } from 'lucide-react';
+import { Coins } from 'lucide-react';
 
 const CoinToss = () => {
   const [result, setResult] = useState<'heads' | 'tails' | null>(null);
@@ -31,7 +30,7 @@ const CoinToss = () => {
 
       <div className="text-center">
         <div className={`w-24 h-24 mx-auto rounded-full border-2 border-green-400 flex items-center justify-center transition-all duration-1000 ${isFlipping ? 'animate-spin' : ''}`}>
-          <Coin className="w-12 h-12 text-green-400" />
+          <Coins className="w-12 h-12 text-green-400" />
         </div>
       </div>
 

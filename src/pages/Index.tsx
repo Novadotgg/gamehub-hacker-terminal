@@ -1,6 +1,6 @@
 
 import React, { useState, useEffect } from 'react';
-import { Brain, Dice2, Coin, ColorSwatch } from 'lucide-react';
+import { Brain, Dice2, Coins, Palette } from 'lucide-react';
 import DiceRoller from '../components/games/DiceRoller';
 import CoinToss from '../components/games/CoinToss';
 import ColorMatching from '../components/games/ColorMatching';
@@ -33,8 +33,8 @@ const Index = () => {
 
   const games = [
     { id: 'dice', name: 'Dice Roller', emoji: '🎲', icon: Dice2, component: DiceRoller },
-    { id: 'coin', name: 'Coin Toss', emoji: '🪙', icon: Coin, component: CoinToss },
-    { id: 'color', name: 'Color Matching', emoji: '🎨', icon: ColorSwatch, component: ColorMatching },
+    { id: 'coin', name: 'Coin Toss', emoji: '🪙', icon: Coins, component: CoinToss },
+    { id: 'color', name: 'Color Matching', emoji: '🎨', icon: Palette, component: ColorMatching },
     { id: 'math', name: 'Quick Math Quiz', emoji: '🧮', icon: Brain, component: QuickMath },
     { id: 'tictactoe', name: 'Tic Tac Toe', emoji: '❌⭕', icon: Brain, component: TicTacToe },
     { id: 'hangman', name: 'Hangman', emoji: '🪓', icon: Brain, component: Hangman },

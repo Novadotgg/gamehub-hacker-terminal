@@ -1,6 +1,6 @@
 
 import React, { useState, useEffect } from 'react';
-import { ColorSwatch } from 'lucide-react';
+import { Palette } from 'lucide-react';
 
 const ColorMatching = () => {
   const [targetColor, setTargetColor] = useState('');
@@ -68,7 +68,7 @@ const ColorMatching = () => {
             onClick={startGame}
             className="bg-green-900/30 border border-green-400 text-green-300 px-6 py-3 rounded-lg font-mono hover:bg-green-900/50 transition-all duration-300 hover:shadow-lg hover:shadow-green-400/20"
           >
-            <ColorSwatch className="w-5 h-5 inline mr-2" />
+            <Palette className="w-5 h-5 inline mr-2" />
             INITIALIZE GAME
           </button>
         </div>
